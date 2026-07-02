@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="joke-app">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-content">
+                    <h1>😄 Joke Generator</h1>
+                    <p class="subtitle">Laugh a little with random jokes</p>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- Joke Display -->
+                <div class="joke-container">
+                    <div class="joke-display" id="jokeDisplay">
+                        <div class="skeleton-loader">
+                            <div class="skeleton-line"></div>
+                            <div class="skeleton-line short"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="category-section">
+                    <label for="categorySelect">Category:</label>
+                    <select id="categorySelect" class="category-select">
+                        <option value="any">Any</option>
+                        <option value="general">General</option>
+                        <option value="programming">Programming</option>
+                        <option value="knock-knock">Knock Knock</option>
+                    </select>
+                </div>
+
+                <!-- Type Filter -->
+                <div class="type-section">
+                    <label>Type:</label>
+                    <div class="type-buttons">
+                        <button class="type-btn active" data-type="any">Any</button>
+                        <button class="type-btn" data-type="single">Single</button>
+                        <button class="type-btn" data-type="twopart">Two-Part</button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="button-group">
+                    <button id="getJokeBtn" class="btn btn-primary">
+                        <span class="btn-text">Get Joke</span>
+                        <span class="btn-icon">😄</span>
+                    </button>
+                    <button id="shareBtn" class="btn btn-secondary" disabled>
+                        <span class="btn-icon">📤</span>
+                        <span class="btn-text">Share</span>
+                    </button>
+                    <button id="copyBtn" class="btn btn-secondary" disabled>
+                        <span class="btn-icon">📋</span>
+                        <span class="btn-text">Copy</span>
+                    </button>
+                </div>
+
+                <!-- Additional Options -->
+                <div class="options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span>Dark Mode</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="safeCheckbox" checked>
+                        <span>Safe Mode (No Nsfw)</span>
+                    </label>
+                </div>
+            </main>
+
+            <!-- Stats Section -->
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Jokes Loaded:</span>
+                    <span class="stat-value" id="jokeCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">API Status:</span>
+                    <span class="stat-value" id="apiStatus">Ready</span>
+                </div>
+            </div>
+
+            <!-- Error Message -->
+            <div class="error-message" id="errorMessage"></div>
+
+            <!-- Loading Indicator -->
+            <div class="loading-indicator" id="loadingIndicator">
+                <div class="spinner"></div>
+                <p>Loading joke...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
