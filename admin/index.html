@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="admin-login-container">
+        <div class="login-box">
+            <h1>Admin Panel</h1>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <div id="loginError" class="error-message"></div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard (Hidden by default) -->
+    <div id="adminPanel" class="admin-panel" style="display: none;">
+        <nav class="admin-navbar">
+            <h2>Admin Dashboard</h2>
+            <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+        </nav>
+
+        <div class="admin-container">
+            <aside class="admin-sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="#" class="menu-item active" data-section="dashboard">📊 Dashboard</a></li>
+                    <li><a href="#" class="menu-item" data-section="content">📝 Content</a></li>
+                    <li><a href="#" class="menu-item" data-section="projects">🔧 Projects</a></li>
+                    <li><a href="#" class="menu-item" data-section="gallery">🖼️ Gallery</a></li>
+                    <li><a href="#" class="menu-item" data-section="settings">⚙️ Settings</a></li>
+                </ul>
+            </aside>
+
+            <main class="admin-content">
+                <!-- Dashboard Section -->
+                <section id="dashboard" class="admin-section active">
+                    <h2>Dashboard</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>Total Projects</h3>
+                            <p class="stat-number">4</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Gallery Images</h3>
+                            <p class="stat-number">9</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Page Views</h3>
+                            <p class="stat-number">1,234</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Messages</h3>
+                            <p class="stat-number">12</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Content Section -->
+                <section id="content" class="admin-section" style="display: none;">
+                    <h2>Edit Content</h2>
+                    <div class="content-editor">
+                        <div class="editor-group">
+                            <label>About Section</label>
+                            <textarea id="aboutContent" rows="6"></textarea>
+                            <button class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projects Section -->
+                <section id="projects" class="admin-section" style="display: none;">
+                    <h2>Manage Projects</h2>
+                    <div class="projects-manager">
+                        <button class="btn btn-primary">+ Add New Project</button>
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Technologies</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>E-Commerce Mobile App</td>
+                                    <td>React Native, Node.js</td>
+                                    <td><span class="status-active">Active</span></td>
+                                    <td><button class="btn-small">Edit</button> <button class="btn-small">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>AI Chat Dashboard</td>
+                                    <td>React, Firebase</td>
+                                    <td><span class="status-active">Active</span></td>
+                                    <td><button class="btn-small">Edit</button> <button class="btn-small">Delete</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Gallery Section -->
+                <section id="gallery" class="admin-section" style="display: none;">
+                    <h2>Manage Gallery</h2>
+                    <div class="gallery-manager">
+                        <button class="btn btn-primary">+ Upload Image</button>
+                        <div class="gallery-preview">
+                            <div class="gallery-thumb">🌐 Web Design 1</div>
+                            <div class="gallery-thumb">📱 Mobile App 1</div>
+                            <div class="gallery-thumb">🎨 UI Design 1</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Settings Section -->
+                <section id="settings" class="admin-section" style="display: none;">
+                    <h2>Settings</h2>
+                    <div class="settings-form">
+                        <div class="form-group">
+                            <label>Site Title</label>
+                            <input type="text" value="My Portfolio">
+                        </div>
+                        <div class="form-group">
+                            <label>Site Description</label>
+                            <textarea rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Change Password</label>
+                            <input type="password" placeholder="New password">
+                            <input type="password" placeholder="Confirm password">
+                            <button class="btn btn-primary">Update Password</button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

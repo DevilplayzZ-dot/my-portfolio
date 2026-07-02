@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admin/index.html" class="admin-link">Admin</a></li>
+                <li><button id="theme-toggle" class="theme-btn">🌙</button></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="gallery-section">
+            <h1>Gallery</h1>
+            <p class="section-subtitle">Explore my work and creative projects</p>
+            
+            <div class="gallery-grid" id="gallery">
+                <div class="gallery-item" data-category="web">
+                    <div class="gallery-image">🌐</div>
+                    <h3>Web Design 1</h3>
+                </div>
+                <div class="gallery-item" data-category="app">
+                    <div class="gallery-image">📱</div>
+                    <h3>Mobile App 1</h3>
+                </div>
+                <div class="gallery-item" data-category="design">
+                    <div class="gallery-image">🎨</div>
+                    <h3>UI Design 1</h3>
+                </div>
+                <div class="gallery-item" data-category="web">
+                    <div class="gallery-image">🌐</div>
+                    <h3>Web Design 2</h3>
+                </div>
+                <div class="gallery-item" data-category="app">
+                    <div class="gallery-image">📱</div>
+                    <h3>Mobile App 2</h3>
+                </div>
+                <div class="gallery-item" data-category="design">
+                    <div class="gallery-image">🎨</div>
+                    <h3>UI Design 2</h3>
+                </div>
+                <div class="gallery-item" data-category="web">
+                    <div class="gallery-image">🌐</div>
+                    <h3>Web Design 3</h3>
+                </div>
+                <div class="gallery-item" data-category="app">
+                    <div class="gallery-image">📱</div>
+                    <h3>Mobile App 3</h3>
+                </div>
+                <div class="gallery-item" data-category="design">
+                    <div class="gallery-image">🎨</div>
+                    <h3>UI Design 3</h3>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="caption"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
